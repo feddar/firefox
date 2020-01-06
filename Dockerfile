@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM neomediatech/ubuntu-base:latest
 
 RUN DEBIAN_FRONTEND=noninteractive \
     apt-get update && \ 
