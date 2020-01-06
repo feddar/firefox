@@ -8,8 +8,8 @@ RUN DEBIAN_FRONTEND=noninteractive \
     apt-get install -y -q firefox ubuntu-restricted-extras && \
     rm -rf /var/lib/apt/lists/*
 
-ENV QT_GRAPHICSSYSTEM="native" \ 
-    DISPLAY :0
+ENV QT_GRAPHICSSYSTEM="native" \
+    DISPLAY=":0"
 COPY entrypoint.sh /
 RUN chmod +x entrypoint.sh
 
