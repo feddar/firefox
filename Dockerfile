@@ -5,7 +5,7 @@ RUN DEBIAN_FRONTEND=noninteractive \
     apt-get install -y tzdata && \
     ln -fs /usr/share/zoneinfo/Europe/Paris /etc/localtime && \
     dpkg-reconfigure --frontend noninteractive tzdata && \
-    apt-get install -y --no-install-recommends -q firefox ubuntu-restricted-extras libpulse0 apulse && \
+    apt-get install -y -q firefox ubuntu-restricted-extras libpulse0 apulse && \
     rm -rf /var/lib/apt/lists/*
 
 ENV QT_GRAPHICSSYSTEM="native" \
