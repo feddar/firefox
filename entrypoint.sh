@@ -18,5 +18,6 @@ USERID=1000
 echo "creating new $USER with UID $USERID"
 useradd -m $USER -u $USERID 
 chown -R $USER /home/$USER
+gpasswd -a $USER audio
 cd /home/$USER 
-su $USER -c "firefox --profile=/tmp/.c --private-window"
+su $USER -c "apulse firefox --profile=/tmp/.c --private-window"
