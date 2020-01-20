@@ -6,10 +6,12 @@ echo 'user_pref("network.proxy.socks", "'"$gw"'");' > /usr/lib/firefox/browser/d
 echo 'user_pref("network.proxy.socks_port", 3333);' >> /usr/lib/firefox/browser/defaults/preferences/all-custom.js
 echo 'user_pref("network.proxy.socks_remote_dns", true);' >> /usr/lib/firefox/browser/defaults/preferences/all-custom.js
 echo 'user_pref("network.proxy.type", 1);' >> /usr/lib/firefox/browser/defaults/preferences/all-custom.js
+echo 'user_pref("network.trr.mode", 2);' >> /usr/lib/firefox/browser/defaults/preferences/all-custom.js
 echo 'pref("network.proxy.socks", "'"$gw"'");' >> /usr/lib/firefox/browser/defaults/preferences/all-custom.js
 echo 'pref("network.proxy.socks_port", 3333);' >> /usr/lib/firefox/browser/defaults/preferences/all-custom.js
 echo 'pref("network.proxy.socks_remote_dns", true);' >> /usr/lib/firefox/browser/defaults/preferences/all-custom.js
 echo 'pref("network.proxy.type", 1);' >> /usr/lib/firefox/browser/defaults/preferences/all-custom.js
+echo 'pref("network.trr.mode", 2);' >> /usr/lib/firefox/browser/defaults/preferences/all-custom.js
 
 USER=firefox
 USERID=1000
