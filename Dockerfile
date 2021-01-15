@@ -1,4 +1,4 @@
-FROM neomediatech/ubuntu-base:latest
+FROM neomediatech/ubuntu-base:20.04
 
 RUN DEBIAN_FRONTEND=noninteractive \
     apt-get update && \ 
