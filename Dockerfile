@@ -1,5 +1,7 @@
 FROM neomediatech/ubuntu-base:20.04
 
+ENV UPDATE=2022-01-19
+
 RUN DEBIAN_FRONTEND=noninteractive \
     apt-get update && \ 
     apt-get install -y tzdata && \
