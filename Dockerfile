@@ -1,7 +1,5 @@
 FROM neomediatech/ubuntu-base
 
-ENV UPDATE=2022-08-08
-
 RUN apt-get update && \
     apt-get -y --no-install-recommends --no-install-suggests dist-upgrade && \
     rm -rf /var/lib/apt/lists/*
