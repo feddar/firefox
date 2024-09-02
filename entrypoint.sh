@@ -13,6 +13,8 @@ echo 'pref("network.proxy.socks_remote_dns", true);' >> /usr/lib/firefox/browser
 echo 'pref("network.proxy.type", 1);' >> /usr/lib/firefox/browser/defaults/preferences/all-custom.js
 echo 'pref("network.trr.mode", 2);' >> /usr/lib/firefox/browser/defaults/preferences/all-custom.js
 
+userdel -f -r ubuntu 2>/dev/null
+
 USER=firefox
 USERID=1000
 echo "creating new $USER with UID $USERID"
