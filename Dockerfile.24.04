@@ -13,17 +13,17 @@ RUN ln -fs /usr/share/zoneinfo/Europe/Paris /etc/localtime && \
 
 RUN apt-get update && \
     apt-get -y --no-install-recommends --no-install-suggests install \
-            bzip2 wget ffmpeg libpulse0 apulse ca-certificates libgtk-3-bin && \
+            bzip2 wget ffmpeg libpulse0 apulse ca-certificates libgtk-3-bin xz-utils && \
     apt-get -y --no-install-recommends --no-install-suggests dist-upgrade && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt
 
 RUN echo "Downloading ..." && \
-    wget -q -O firefox.tar.bz2 "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=en-US" && \
+    wget -q -O firefox.tar.xz "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=en-US" && \
     echo "Unpacking ..." && \
-    tar xfj firefox.tar.bz2 && \
+    tar xfJ firefox.tar.xz && \
     ln -s /opt/firefox/firefox /usr/bin/ && \
-    rm -f firefox.tar.bz2
+    rm -f firefox.tar.xz
 
 CMD ["/bin/sh", "/entrypoint.sh"]
